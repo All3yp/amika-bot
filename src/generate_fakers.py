@@ -4,9 +4,6 @@ import random
 fake = Faker('pt_BR')
 
 # Funções
-# def generate_email(data_amount: int):
-#     for _ in range(data_amount):
-#         yield fake.email()
 
 def generate_name(data_amount: int):
     for _ in range(data_amount):

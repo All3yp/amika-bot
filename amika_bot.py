@@ -4,7 +4,7 @@ import time
 import random
 
 def random_time():
-    return random.uniform(1, 3)
+    return random.uniform(1, 10)
 
 def send_request(n: int):
     for username, email in src.generate_fakers.generate_fake_data(n):

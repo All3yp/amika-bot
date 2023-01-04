@@ -4,13 +4,9 @@ from selenium.webdriver.common.action_chains import ActionChains
 import time
 
 def open_browser(url):
-    # options = webdriver.FirefoxOptions()
-    # options.add_argument("--headless")
-    # browser = webdriver.Firefox(options=options)
     browser = webdriver.Firefox()
     browser.get(url)
     browser.maximize_window()
-    # browser.set_window_size(2000, 2000)
     return browser
 
 def clickAmikaOption(browser):
