@@ -1,17 +1,22 @@
 import src.webdriver
 import sys
 import time
+import random
+
+def random_time():
+    return random.uniform(1, 3)
 
 def send_request(n: int):
     for username, email in src.generate_fakers.generate_fake_data(n):
-        # # time.sleep(5)
-        # # src.webdriver.accept_cookies(browser)
         browser = src.webdriver.open_browser('https://psq.mobi:443/$/?psq=1004&c=65')
-        time.sleep(5)
+        time.sleep(random_time())
         src.webdriver.fill_form_signup(browser, username, email)
-        time.sleep(5)
-        # src.webdriver.click_submit_button(browser)
-        # src.webdriver.close_browser(browser)
+        time.sleep(random_time())
+        src.webdriver.clickAmikaOption(browser)
+        time.sleep(random_time())
+        src.webdriver.click_submit_button(browser)
+        time.sleep(random_time())
+        browser.close()
     return True
 
 # MARK: - Main

@@ -18,7 +18,7 @@ def generate_email_from(name: str):
     return formatUnicode(email).lower()
 
 def generate_random_spacer():
-    suffixes = ['.', '_', '']
+    suffixes = ['.', '_', str(random.randint(1,99)), '']
     random.shuffle(suffixes)
     return suffixes.pop()
 
