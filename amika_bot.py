@@ -4,11 +4,11 @@ import time
 import random
 
 def random_time():
-    return random.uniform(1, 10)
+    return 6 #random.uniform(1, 10)
 
 def send_request(n: int):
     for username, email in src.generate_fakers.generate_fake_data(n):
-        browser = src.webdriver.open_browser('https://psq.mobi:443/$/?psq=1004&c=65')
+        browser = src.webdriver.open_browser('https://psq.mobi/$/main.asp?psq=1065&c=65&q=1')
         time.sleep(random_time())
         src.webdriver.fill_form_signup(browser, username, email)
         time.sleep(random_time())
