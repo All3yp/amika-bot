@@ -3,8 +3,17 @@ import sys
 import time
 import random
 
+# Dicionário com os valores do HTML
+options_dict = {
+    '109558': 'Amika Coffeehouse',
+    '109559': 'Le Pain Le Café',
+    '109560': 'Atelier 1913',
+    '109561': 'Tipo Café',
+    '109562': 'Torra Café'
+}
+
 def random_time():
-    return 6 #random.uniform(1, 10)
+    return 2 #random.uniform(1, 10)
 
 def send_request(n: int):
     for username, email in src.generate_fakers.generate_fake_data(n):
@@ -12,7 +21,7 @@ def send_request(n: int):
         time.sleep(random_time())
         src.webdriver.fill_form_signup(browser, username, email)
         time.sleep(random_time())
-        src.webdriver.clickAmikaOption(browser)
+        src.webdriver.clickAmikaOption(browser, options_dict)
         time.sleep(random_time())
         src.webdriver.click_submit_button(browser)
         time.sleep(random_time())

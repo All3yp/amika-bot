@@ -9,9 +9,16 @@ def open_browser(url):
     browser.maximize_window()
     return browser
 
-def clickAmikaOption(browser):
+# Função para obter o texto do elemento clicado usando o dicionário
+def get_clicked_option_text(value, options_dict):
+    if value in options_dict:
+        return options_dict[value]
+    else:
+        return "Opção não encontrada no dicionário"
+
+# Função com a chamada para obter o texto do elemento clicado
+def clickAmikaOption(browser, options_dict):
     try:
-        # Encontrar o elemento usando o seletor de ID
         click_box = browser.find_element(By.ID, "perg13935")
 
         # Encontrar todos os elementos radio dentro do elemento clicável
@@ -23,19 +30,15 @@ def clickAmikaOption(browser):
                 browser.execute_script("arguments[0].scrollIntoView();", click_box)
                 ActionChains(browser).move_to_element(click_box).click(radio).perform()
 
-                # element = browser.find_element(By.XPATH, "//span[@class='ui-btn-text' and text()='Amika Coffeehouse']")
-                # if element.is_selected():
-                #     print(element.text + " foi selecionado com sucesso!")
-                # else:
-                #     print("Erro: A opção não foi clicada corretamente." + element)
-
                 if radio.is_selected():
-                    print("Opção clicada com sucesso!")
+                    option_text = get_clicked_option_text(radio.get_attribute("value"), options_dict)
+                    print(f"\n{'='*30}\nOpção: '{option_text}' clicada com sucesso.\n{'='*30}\n")
+
                 else:
                     print("Erro: A opção não foi clicada corretamente.")
                 break
     except Exception as e:
-        print("Erro ao clicar na opção", e)
+        print("Erro:", e.with_traceback)
         return False
 
 def click_submit_button(browser):
