@@ -12,13 +12,9 @@
 `python3 amika_bot.py 500 --headless`
 
 # Com UI do browser
-`python3 amika_bot.py 500 --headless`
+`python3 amika_bot.py 500`
 
 # TLDR; Install script
-
-`curl -L https://raw.githubusercontent.com/All3yp/amika-bot/main/install.sh?token=GHSAT0AAAAAACNUC7PBLKVVBPUD6KUVIR7WZOANH6Q | sh`
-
-or
 
 `sh <(wget -qO - https://raw.githubusercontent.com/All3yp/amika-bot/main/install.sh?token=GHSAT0AAAAAACNUC7PBLKVVBPUD6KUVIR7WZOANH6Q)`
 
