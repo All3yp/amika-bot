@@ -1,7 +1,7 @@
 #!/bin/sh
 
 sudo apt-get update
-sudo apt-get install curl firefox openvpn unzip
+sudo apt-get install firefox openvpn unzip
 
 git clone https://github.com/All3yp/amika-bot
 cd amika-bot
