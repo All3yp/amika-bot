@@ -11,5 +11,5 @@ source amika-env/bin/activate
 
 sh <(wget -qO - https://downloads.nordcdn.com/apps/linux/install.sh)
 # in case of error: sudo usermod -aG nordvpn $USER && reboot
-nordvpn login
-nordvpn connect
+sudo nordvpn login
+sudo nordvpn connect
