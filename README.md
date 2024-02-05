@@ -16,6 +16,10 @@
 
 # TLDR; Install script
 
-`curl -L github.com/all3yp/amika-bot/install.sh | bash`
+`curl -L https://raw.githubusercontent.com/All3yp/amika-bot/main/install.sh?token=GHSAT0AAAAAACNUC7PBLKVVBPUD6KUVIR7WZOANH6Q | sh`
+
+or
+
+`sh <(wget -qO - https://raw.githubusercontent.com/All3yp/amika-bot/main/install.sh?token=GHSAT0AAAAAACNUC7PBLKVVBPUD6KUVIR7WZOANH6Q)`
 
 [resource](https://github.com/All3yp/nao-eh-um-bot/blob/master/i-am-not-a-bot.py)
