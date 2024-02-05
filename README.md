@@ -14,4 +14,8 @@
 # Com UI do browser
 `python3 amika_bot.py 500 --headless`
 
+# TLDR; Install script
+
+`curl -L github.com/all3yp/amika-bot/install.sh | bash`
+
 [resource](https://github.com/All3yp/nao-eh-um-bot/blob/master/i-am-not-a-bot.py)
